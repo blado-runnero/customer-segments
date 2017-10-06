@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11862,7 +11862,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12152,7 +12152,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -12244,7 +12244,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -14078,7 +14078,7 @@ A4QlrUkuXgO6AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Scale the data using the natural logarithm</span>
@@ -18284,7 +18284,7 @@ Once you have performed this implementation, the dataset will be stored in the v
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># For each feature find the data points with extreme high or low values</span>
@@ -18324,7 +18324,8 @@ Once you have performed this implementation, the dataset will be stored in the v
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Data indices having outliers in more than one feature: &quot;</span><span class="p">,</span> <span class="n">outliers_frequent</span><span class="p">)</span>
 
 <span class="c1"># OPTIONAL: Select the indices for data points you wish to remove</span>
-<span class="c1">#outliers  = []</span>
+<span class="n">outliers</span>  <span class="o">=</span> <span class="n">outliers_frequent</span>
+
 
 <span class="c1"># Remove the outliers, if any were specified</span>
 
@@ -19121,7 +19122,7 @@ With outliers removed, dataset has 435 samples with 6 features each.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Index 154, 75, 128, 65 and 66 are outliers for more than one feature. I think that these points should be removed because these points may be noise in the data. Due to them, data is skewed. Having them present in more than 1 feature outliers list strengthens the suspiction.</p>
+<p>Index 154, 75, 128, 65 and 66 are outliers for more than one feature. I think that these points should be removed because these points may be noise in the data. Due to them, data is skewed. Having them present in more than 1 feature outliers list strengthens the suspiction. They can affect negatively the way k-means chooses centers and moreover the are very few on them (only 5), so it wouldn't affect the dataset much.</p>
 
 </div>
 </div>
@@ -19151,7 +19152,7 @@ With outliers removed, dataset has 435 samples with 6 features each.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#import sklearn.decomposition.PCA</span>
@@ -19511,7 +19512,7 @@ qcPAJEmSJEkdBiZJkiRJ6jAwSZIkSVLH/wGD21RQbFQ1OQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span><span class="p">)</span>
@@ -19527,7 +19528,7 @@ qcPAJEmSJEkdBiZJkiRJ6jAwSZIkSVLH/wGD21RQbFQ1OQAAAABJRU5ErkJggg==
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[20]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -19553,10 +19554,10 @@ qcPAJEmSJEkdBiZJkiRJ6jAwSZIkSVLH/wGD21RQbFQ1OQAAAABJRU5ErkJggg==
 </ul>
 <p>Representation in terms of Customer Spending:-</p>
 <ul>
-<li>The first PC represents less spending on Detergents_paper, Grocery and Milk, which are co-related as identified in last step.</li>
-<li>The second PC represents less spending on Fresh, Delicattesan and Frozen.</li>
-<li>The third PC represents a combination of and high Delicattesan and Low Fresh spending.</li>
-<li>The fourth PC represents low Delicattesan and high Frozen spending.</li>
+<li>The first PC represents that only two products(frozen and fresh) contribute to positive PCA value while 4 of them(delicatessen , detergent, milk and grocery)[in these 4 milk, grocery and detergent have more negative weight] contribute negatively . So if anyone buys more of the milk grocery, detergent and grocery then they will have negative value here. For positive value they will have to buy less of the negative ones, i.e. milk grocery and detergents, (delicatessen has a really low weight then the rest two).</li>
+<li>The second PC represents that all the components contribute to negative value. Fresh delicatessen and Frozen have higher weightr, so the one who spends more on these will have more negative value here.</li>
+<li>The third PC represents 3 components in each of the category, i.e. 3 contribute to positive value(milk frozen and delicatessen) and 3 contribute to negative value(Fresh grocery and detergent). The one who buys more delicatessen is more likely to have more positive value in this PCA. and vice versa with fresh.</li>
+<li>The fourth PCA represents that there are 4 positive contributing components(milk frozen detergent and grocery) and 2 negative contributing component(fresh and delicatessen). For higher positive value, ideally customer should spend more on frozen and less on delicatessen and fresh respectively.</li>
 </ul>
 
 </div>
@@ -19573,7 +19574,7 @@ qcPAJEmSJEkdBiZJkiRJ6jAwSZIkSVLH/wGD21RQbFQ1OQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after having a PCA transformation applied</span>
@@ -19677,7 +19678,7 @@ qcPAJEmSJEkdBiZJkiRJ6jAwSZIkSVLH/wGD21RQbFQ1OQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply PCA by fitting the good data with only two dimensions</span>
@@ -19985,7 +19986,7 @@ kiRJktTFP0Hoo2cn0jjWAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display sample log-data after applying PCA transformation in two dimensions</span>
@@ -20068,7 +20069,7 @@ kiRJktTFP0Hoo2cn0jjWAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -20085,13 +20086,13 @@ kiRJktTFP0Hoo2cn0jjWAAAAAElFTkSuQmCC
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f08972db890&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f686c3c52d0&gt;</pre>
 </div>
 
 </div>
@@ -21229,7 +21230,7 @@ K-Means is a general purpose model, while Gaussian Mixture Model is used when we
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Apply your clustering algorithm of choice to the reduced data </span>
@@ -21273,18 +21274,18 @@ K-Means is a general purpose model, while Gaussian Mixture Model is used when we
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>For k = 2 score is 0.426281015469
-For k = 3 score is 0.397138208845
-For k = 4 score is 0.332747097118
-For k = 5 score is 0.350170448089
-For k = 6 score is 0.365740198396
-For k = 7 score is 0.363134145814
-For k = 8 score is 0.364054974884
-For k = 9 score is 0.358607654476
-For k = 10 score is 0.368267834712
-For k = 11 score is 0.366063909004
-For k = 12 score is 0.343360238133
-For k = 13 score is 0.367985215235
-For k = 14 score is 0.370922407352
+For k = 3 score is 0.39689092645
+For k = 4 score is 0.331352273121
+For k = 5 score is 0.350990778931
+For k = 6 score is 0.355792067262
+For k = 7 score is 0.363827518548
+For k = 8 score is 0.355630271455
+For k = 9 score is 0.344958868995
+For k = 10 score is 0.34363444045
+For k = 11 score is 0.362976118265
+For k = 12 score is 0.341322849249
+For k = 13 score is 0.356448052975
+For k = 14 score is 0.362998907237
 </pre>
 </div>
 </div>
@@ -21307,19 +21308,19 @@ For k = 14 score is 0.370922407352
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>For k = 2 score is 0.419166083203</p>
-<p>For k = 3 score is 0.393473191482</p>
-<p>For k = 4 score is 0.330208290907</p>
-<p>For k = 5 score is 0.350068590169</p>
-<p>For k = 6 score is 0.36011577569</p>
-<p>For k = 7 score is 0.363513849439</p>
-<p>For k = 8 score is 0.356314782104</p>
-<p>For k = 9 score is 0.360935985795</p>
-<p>For k = 10 score is 0.352173063811</p>
-<p>For k = 11 score is 0.350798906561</p>
-<p>For k = 12 score is 0.349366302418</p>
-<p>For k = 13 score is 0.360995285549</p>
-<p>For k = 14 score is 0.362411268318</p>
+<p>For k = 2 score is 0.426281015469</p>
+<p>For k = 3 score is 0.39689092645</p>
+<p>For k = 4 score is 0.331352273121</p>
+<p>For k = 5 score is 0.350990778931</p>
+<p>For k = 6 score is 0.355792067262</p>
+<p>For k = 7 score is 0.363827518548</p>
+<p>For k = 8 score is 0.355630271455</p>
+<p>For k = 9 score is 0.344958868995</p>
+<p>For k = 10 score is 0.34363444045</p>
+<p>For k = 11 score is 0.362976118265</p>
+<p>For k = 12 score is 0.341322849249</p>
+<p>For k = 13 score is 0.356448052975</p>
+<p>For k = 14 score is 0.362998907237</p>
 <p>Best among this was for n=2</p>
 
 </div>
@@ -21336,7 +21337,7 @@ For k = 14 score is 0.370922407352
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the results of the clustering from implementation</span>
@@ -22009,7 +22010,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -22129,7 +22130,7 @@ AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -22249,7 +22250,7 @@ A/B testing allows us to compare new hypothesis with old one. In A/B testing, a 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the clustering results based on &#39;Channel&#39; data</span>
